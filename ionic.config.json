@@ -1,0 +1,7 @@
+{
+  "name": "teste-cronometro",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
