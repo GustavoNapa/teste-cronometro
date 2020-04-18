@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Cronometro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p style="font-size: 2em; font-weight: 600;">{{horas}} : {{minutos}} : {{segundos}}</p>
+    <BR><BR><BR>
+
+    <ion-button color="success" shape="round" (click)="start()" *ngIf="!play">Start</ion-button>
+    <BR>
+    <ion-button color="warning" shape="round" (click)="pause()" *ngIf="play">Pause</ion-button>
+    <BR>
+    <ion-button color="danger" shape="round" (click)="zerar()" *ngIf="!play">Zerar</ion-button>
+
   </div>
 </ion-content>
+<ion-footer style="padding: 2%;">
+  <p>Author: Gustavo Souza</p>
+</ion-footer>
